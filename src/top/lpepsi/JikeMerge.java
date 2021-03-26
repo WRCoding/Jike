@@ -31,7 +31,7 @@ public class JikeMerge {
      **/
     private static void merge(int[] nums, int p, int q, int r) {
         int i = p; int j = q+1; int k = 0;
-        //必须要+1,临时数组才够位置
+        //必须要+1,临时数组才够位置,下面复制数组也是同理
         int[] temp = new int[r-p+1];
         while (i<=q && j<=r){
             if (nums[i] > nums[j]){

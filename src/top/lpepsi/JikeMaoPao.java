@@ -16,13 +16,10 @@ public class JikeMaoPao {
      * @return void
      **/
 
-    public static void maoPao(Integer[] nums){
+    public static void maoPao(int[] nums){
         if (nums.length <=1){
             System.out.println("不用排序");
         }
-        System.out.println("-----排序前------:");
-        Arrays.stream(nums).forEach(System.out::print);
-        System.out.println("");
         for(int i = 0;i<nums.length;i++){
             boolean flag = false;
             for (int j=0 ; j<nums.length-1-i;j++){
@@ -37,12 +34,15 @@ public class JikeMaoPao {
                 break;
             }
         }
-        System.out.println("-----排序后------:");
-        Arrays.stream(nums).forEach(System.out::print);
     }
 
     public static void main(String[] args) {
-        Integer[] nums = {3,2,1,4,5,6};
+        int[] nums = {2,3,1,6,3,8,5};
+        System.out.println("排序前:");
+        Arrays.stream(nums).forEach(System.out::print);
+        System.out.println();
         JikeMaoPao.maoPao(nums);
+        System.out.println("排序后:");
+        Arrays.stream(nums).forEach(System.out::print);
     }
 }

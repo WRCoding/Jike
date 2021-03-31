@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /**
  * @author 林北
- * @description 归并排序
+ * @description 排序算法-归并排序
  * @date 2021-03-25 09:14
  */
 public class JikeMerge {

@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 /**
  * @author 林北
- * @description 快速排序 *
+ * @description 排序算法-快速排序 *
  * @date 2021-03-26 08:49
  */
 public class JikeKuaiPai {

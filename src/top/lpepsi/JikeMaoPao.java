@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /**
  * @author 林北
- * @description 冒泡排序
+ * @description 排序算法-冒泡排序
  * @date 2021-03-19 12:36
  */
 public class JikeMaoPao {

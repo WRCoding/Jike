@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /**
  * @author 林北
- * @description 计数排序
+ * @description 排序算法-计数排序
  * @date 2021-03-27 15:59
  */
 public class JikeCount {

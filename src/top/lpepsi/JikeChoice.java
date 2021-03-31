@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /**
  * @author 林北
- * @description 选择排序
+ * @description 排序算法-选择排序 *
  * @date 2021-03-25 08:48
  */
 public class JikeChoice {

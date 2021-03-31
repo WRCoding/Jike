@@ -34,6 +34,7 @@ public class JikeCount {
          }
          int[] temp = new int[n];
          for (int i = nums.length - 1; i >= 0; i--) {
+             //从后往前取保证了稳定性
              int params = nums[i];
              int index = b[params];
              temp[index-1] = params;

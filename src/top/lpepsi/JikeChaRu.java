@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /**
  * @author 林北
- * @description 插入排序
+ * @description 插入排序 *
  * @date 2021-03-24 09:27
  */
 public class JikeChaRu {

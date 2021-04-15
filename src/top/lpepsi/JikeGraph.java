@@ -15,6 +15,7 @@ public class JikeGraph {
     private boolean[] visited;
     private Queue<Integer> queue = new LinkedList<>();
     private Graph graph;
+    private boolean found = false;
 
     /**
      * @Author 林北
@@ -45,18 +46,61 @@ public class JikeGraph {
             }
         }
     }
+
+    /**
+     * @Author 林北
+     * @Description //TODO 深度优先搜索
+     * @Param [start, end]
+     * @return void
+     **/
+    public void DFS(int start, int end){
+        recurDfs(start, end);
+        print(prev, start, end, end);
+    }
+
+    private void recurDfs(int start, int end) {
+        if (found){
+            return;
+        }
+        visited[start] = true;
+        if (start == end){
+            found = true;
+            return;
+        }
+        for (int i = 0; i<graph.getAdj()[start].size(); i++){
+            int q = graph.getAdj()[start].get(i);
+            if (!visited[q]){
+                prev[q] = start;
+                recurDfs(q,end);
+            }
+        }
+    }
+
+
+    /**
+     * @Author 林北
+     * @Description //TODO 初始化图,图的形状为
+     * 1-2-3
+       | | |
+       4-5-6
+         | |
+         7-8
+     * @Param [v]
+     * @return top.lpepsi.Graph
+     **/
+
     private Graph initGraph(int v){
         Graph graph = new Graph(v);
-        graph.insertData(0,1);
-        graph.insertData(0,3);
         graph.insertData(1,2);
         graph.insertData(1,4);
+        graph.insertData(2,3);
         graph.insertData(2,5);
-        graph.insertData(3,4);
+        graph.insertData(3,6);
         graph.insertData(4,5);
-        graph.insertData(4,6);
+        graph.insertData(5,6);
         graph.insertData(5,7);
-        graph.insertData(6,7);
+        graph.insertData(6,8);
+        graph.insertData(7,8);
         return graph;
     }
 
@@ -79,8 +123,8 @@ public class JikeGraph {
     }
 
     public static void main(String[] args) {
-        JikeGraph jikeGraph = new JikeGraph(8);
-        jikeGraph.BFS(0,6);
+        JikeGraph jikeGraph = new JikeGraph(9);
+        jikeGraph.DFS(1,7);
     }
 
 }
